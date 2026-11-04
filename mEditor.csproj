@@ -28,4 +28,8 @@
     <ItemGroup>
         <Compile Remove="mEditor.Tests/**/*.cs" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Models\Editor\" />
+    </ItemGroup>
 </Project>
