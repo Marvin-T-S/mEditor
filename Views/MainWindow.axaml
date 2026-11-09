@@ -17,8 +17,45 @@
         <vm:MainViewModel/>
     </Design.DataContext>
 
-    <TextBox Text="{Binding Greeting}"
-             HorizontalAlignment="Center"
-             VerticalAlignment="Center" />
+    <Window.Styles>
+
+        <!-- Editor -->
+        <Style Selector="TextBox.editor">
+            <Setter Property="Background" Value="{Binding Editor.Background}"/>
+            <Setter Property="Foreground" Value="{Binding Editor.Foreground}"/>
+            <Setter Property="BorderBrush" Value="{Binding Editor.BorderBrush}"/>
+            <Setter Property="BorderThickness" Value="{Binding Editor.BorderThickness}"/>
+            <Setter Property="CornerRadius" Value="{Binding Editor.CornerRadius}"/>
+            <Setter Property="Padding" Value="{Binding Editor.Padding}"/>
+            <Setter Property="FontSize" Value="{Binding Editor.FontSize}"/>
+            <Setter Property="VerticalContentAlignment" Value="{Binding Editor.VerticalContentAlignment}"/>
+            <Setter Property="SelectionBrush" Value="{Binding Editor.SelectionBrush}"/>
+            <Setter Property="CaretBrush" Value="{Binding Editor.CaretBrush}"/>
+        </Style>
+
+        <Style Selector="TextBox.editor:focus">
+            <Setter Property="BorderBrush" Value="#8B5CF6"/>
+        </Style>
+        
+
+    </Window.Styles>
+
+    <Grid RowDefinitions="Auto,*,Auto,Auto"
+          Margin="30"
+          RowSpacing="20">
+        
+
+        <!-- Editor -->
+        <TextBox Grid.Row="1"
+                 Classes="editor"
+                 Text="{Binding Greeting}"
+                 PlaceholderText="Start typing..."
+                 AcceptsReturn="True"
+                 AcceptsTab="True"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"/>
+
+    </Grid>
 
 </Window>
