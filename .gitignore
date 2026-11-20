@@ -16,7 +16,6 @@ x86/
 *.pdb
 *.dll
 *.exe
-*.app
 *.nupkg
 project.lock.json
 
