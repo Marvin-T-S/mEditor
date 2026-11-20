@@ -53,7 +53,7 @@ public sealed class LineIndex
         return (line, position - _lineStarts[line]);
     }
 
-    
+
     public (int Start, int Length) GetLineRange(
         int line,
         string text)
