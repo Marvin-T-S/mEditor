@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\mEditor.csproj" />
+    <ProjectReference Include="..\..\src\mEditor.Application\mEditor.Application.csproj" />
   </ItemGroup>
 
 </Project>
